@@ -107,6 +107,7 @@ var parse_content = function (content) {
       var mainData = result.pageTables[result.currentPages - 1].tables[0];
       var GPAData = result.pageTables[result.currentPages - 3];
       mainDataProcessAndDisplay(mainData);
+      console.log(result);
       GPADataProcess(GPAData);
       // const fileName = document.getElementById("pdf-file").files[0];
       // console.log(fileName.name);

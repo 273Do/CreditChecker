@@ -253,7 +253,7 @@ function makeTableAndBar(data) {
           TakingCoursesCreditsData[j - 1] ==
         0
       )
-        row_5_data_tmp[j].style.backgroundColor = "lawngreen";
+        row_5_data_tmp[j].style.backgroundColor = "green";
       else row_5_data_tmp[j].style.backgroundColor = "hotpink";
     }
     row_5.appendChild(row_5_data_tmp[j]);
