@@ -63,15 +63,17 @@ function makeTableAndBar(data) {
     tanniTmp = tanni.zyouhou;
     EarnedCreditsData.push(Number(data[1].split("\n")[24]));
     EarnedCreditsData.push(Number(data[1].split("\n")[25]));
-    TakingCoursesCreditsData.push(Number(data[1].split("\n")[24]));
-    TakingCoursesCreditsData.push(Number(data[1].split("\n")[25]));
+    TakingCoursesCreditsData.push(Number(data[3].split("\n")[24]));
+    TakingCoursesCreditsData.push(Number(data[3].split("\n")[25]));
+
+    console.log(data[3]);
   } else if (data[1].split("\n").length == 34) {
     //経済学部
     tanniTmp = tanni.keizai;
     EarnedCreditsData.push(Number(data[1].split("\n")[30]));
     EarnedCreditsData.push(Number(data[1].split("\n")[31]));
-    TakingCoursesCreditsData.push(Number(data[1].split("\n")[30]));
-    TakingCoursesCreditsData.push(Number(data[1].split("\n")[31]));
+    TakingCoursesCreditsData.push(Number(data[3].split("\n")[30]));
+    TakingCoursesCreditsData.push(Number(data[3].split("\n")[31]));
   } else {
     alert("このPDFファイルは読み込めません．");
     window.location.href = window.location.href;
@@ -250,7 +252,7 @@ function makeTableAndBar(data) {
       if (
         tanniTmp[j - 1] -
           EarnedCreditsData[j - 1] -
-          TakingCoursesCreditsData[j - 1] ==
+          TakingCoursesCreditsData[j - 1] <=
         0
       )
         row_5_data_tmp[j].style.backgroundColor = "green";
