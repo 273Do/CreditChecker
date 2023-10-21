@@ -37,8 +37,9 @@ https://credit-checker.273doworks.com \
 
 ## 動作確認
 
+- ブラウザで動作します．
 - Windows11
-- macOS Ventura
+- macOS Sonoma
 
 ## クレジット/使用ライブラリ
 
