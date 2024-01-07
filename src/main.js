@@ -221,21 +221,34 @@ function makeTableAndBar(data) {
   let row_5_data_3 = document.createElement("td");
   row_5_data_3.innerHTML =
     tanniTmp[1] - EarnedCreditsData[1] - TakingCoursesCreditsData[1];
+  if (tanniTmp[1] - EarnedCreditsData[1] - TakingCoursesCreditsData[1] < 0)
+    row_5_data_3.innerHTML = 0;
   let row_5_data_4 = document.createElement("td");
   row_5_data_4.innerHTML =
     tanniTmp[2] - EarnedCreditsData[2] - TakingCoursesCreditsData[2];
+  if (tanniTmp[2] - EarnedCreditsData[2] - TakingCoursesCreditsData[2] < 0)
+    row_5_data_4.innerHTML = 0;
   let row_5_data_5 = document.createElement("td");
   row_5_data_5.innerHTML =
     tanniTmp[3] - EarnedCreditsData[3] - TakingCoursesCreditsData[3];
+  if (tanniTmp[3] - EarnedCreditsData[3] - TakingCoursesCreditsData[3] < 0)
+    row_5_data_5.innerHTML = 0;
   let row_5_data_6 = document.createElement("td");
   row_5_data_6.innerHTML =
     tanniTmp[4] - EarnedCreditsData[4] - TakingCoursesCreditsData[4];
+  if (tanniTmp[4] - EarnedCreditsData[4] - TakingCoursesCreditsData[4] < 0)
+    row_5_data_6.innerHTML = 0;
   let row_5_data_7 = document.createElement("td");
   row_5_data_7.innerHTML =
     tanniTmp[5] - EarnedCreditsData[5] - TakingCoursesCreditsData[5];
+  if (tanniTmp[5] - EarnedCreditsData[5] - TakingCoursesCreditsData[5] < 0)
+    row_5_data_7.innerHTML = 0;
   let row_5_data_8 = document.createElement("td");
   row_5_data_8.innerHTML =
-    tanniTmp[6] - EarnedCreditsData[6] - TakingCoursesCreditsData[6];
+    tanniTmp[6] -
+    EarnedCreditsData[6] -
+    TakingCoursesCreditsData[6] -
+    (tanniTmp[5] - EarnedCreditsData[5] - TakingCoursesCreditsData[5]);
 
   var row_5_data_tmp = [
     row_5_data_1,
